@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Your Super Hero is</h1>
+<div id="hero-chart">
+    <h2><%= content.name %></h2>
+    <img class="hero-img" src="<%= content.image.url %>" alt="<%= content.name %> Image">
+    <div class="hero-chart-item hero-chart-attributes">
+        <div>
+            <p class="hero-chart-item">Intelligence: <%= content.powerstats.intelligence %></p>
+            <p class="hero-chart-item">Strength:     <%= content.powerstats.strength %></p>
+            <p class="hero-chart-item">Speed:        <%= content.powerstats.speed %></p>
+        </div>
+        <div>
+            <p class="hero-chart-item">Durability:   <%= content.powerstats.durability %></p>
+            <p class="hero-chart-item">Power:        <%=content.powerstats.power %></p>
+            <p class="hero-chart-item">Combat:       <%=content.powerstats.combat %></p>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
